@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: feign-client
+    
+feign: 
+  hystrix: 
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  #注册 中心已经开启认证
+  instance:
+    #appname: feignClient
+    #preferIpAddress: true
+    #instanceId: 127.0.0.1:8081
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+    

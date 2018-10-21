@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zuul-client
+
+server:
+  port: 8089
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+zuul:
+  #ignoredServices: '*'
+  routes:
+    feign-client: /ymlFileFilterTest1/**
+    #eureka-client: /ymlFileFilterTest2/**
