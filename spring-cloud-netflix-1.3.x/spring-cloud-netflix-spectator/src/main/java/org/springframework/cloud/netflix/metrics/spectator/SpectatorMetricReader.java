@@ -50,7 +50,7 @@ public class SpectatorMetricReader implements MetricReader {
 				"cannot construct a tag-based Spectator id from a hierarchical name");
 	}
 
-	@Override
+	/*@Override
 	public Iterable<Metric<?>> findAll() {
 		return stream(registry.spliterator(), false)
 				.flatMap(
@@ -59,6 +59,11 @@ public class SpectatorMetricReader implements MetricReader {
 										measure.value())))
 				.sorted((m1, m2) -> m1.getName().compareTo(m2.getName()))
 				.collect(Collectors.toList());
+	}*/
+	@Override
+	public Iterable<Metric<?>> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -66,4 +71,6 @@ public class SpectatorMetricReader implements MetricReader {
 		return stream(registry.spliterator(), false).flatMap(
 				m -> stream(m.measure().spliterator(), false)).count();
 	}
+
+
 }

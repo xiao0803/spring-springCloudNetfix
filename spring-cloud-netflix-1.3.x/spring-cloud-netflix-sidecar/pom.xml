@@ -103,8 +103,13 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-client</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-cloud-config-server</artifactId>
+			<version>1.3.2.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-config-client</artifactId>
+		    <version>1.3.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 </project>
